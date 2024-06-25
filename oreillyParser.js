@@ -1,5 +1,5 @@
 const csv = require('@fast-csv/parse')
-const parseSymbols = require('./commonTools')
+const { parseSymbols, removeDoubleQuotes } = require('./commonTools')
 const { getQuoteByChapter } = require('./utils')
 
 async function parse(input) {
@@ -74,7 +74,7 @@ function parseCsv(data) {
 function createQuoteFromLine(line) {
   const date = line['Date of Highlight']
   const url = line['Annotation URL']
-  const quote = parseSymbols(line.Highlight)
+  const quote = removeDoubleQuotes(parseSymbols(line.Highlight))
   const note = parseSymbols(line['Personal Note'])
   const getQuote = () => {
     if (!!note) {
@@ -85,7 +85,7 @@ function createQuoteFromLine(line) {
   return {
     chapter: line['Chapter Title'],
     date,
-    quote: `${getQuote()} | [${date}](${url})`,
+    quote: `${getQuote()} [[${date}](${url})]`,
   }
 }
 

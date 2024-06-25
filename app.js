@@ -47,7 +47,6 @@ const app = async () => {
     }
   })
   const newBooks = await Promise.all(bookPromises)
-
   markdownBuilder(newBooks, outputPath)
 }
 

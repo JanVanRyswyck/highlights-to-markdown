@@ -1,6 +1,7 @@
 node_modules
-output
 My\ Clippings.txt
 *.csv
+*.md
 
+.idea
 .DS_Store

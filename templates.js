@@ -6,21 +6,10 @@ issued: {{issued}}
 {{#pages}}pages: {{pages}}{{/pages}}
 isbn: {{isbn}}
 ---
-# [{{title}}]({{&url}})
-By {{&author}}
+# {{title}}
 
-![]({{{coverUrl}}})
-
-{{&description}}
-
-## Contents
-{{#toc}}
-- [{{&label}}]({{&url}}{{filename}})
-{{/toc}}
-
-## Highlights
 {{#quotes}}
-### {{&chapter}}
+## {{&chapter}}
 {{&quote}}
 
 {{/quotes}}

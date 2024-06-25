@@ -5,7 +5,7 @@ const SEPARATOR = '=========='
 const INPUT_DATE_FORMAT = 'D [escaped] MMMM [escaped] YYYY H:mm:ss'
 const OUTPUT_DATE_FORMAT = 'YYYY-MM-DD'
 
-const parseSymbols = require('./commonTools')
+const { parseSymbols } = require('./commonTools')
 
 async function parse(input) {
   const rawClippings = input

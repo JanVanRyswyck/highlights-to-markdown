@@ -3,7 +3,7 @@ const path = require('path')
 const url = require('url')
 const axios = require('axios')
 
-const parseSymbols = require('./commonTools')
+const { parseSymbols } = require('./commonTools')
 const { getQuoteByChapter } = require('./utils')
 
 const TurndownService = require('turndown')

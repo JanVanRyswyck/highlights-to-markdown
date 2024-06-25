@@ -3,4 +3,11 @@ function parseSymbols(input) {
   return input.replaceAll(':', '&#58;')
 }
 
-module.exports = parseSymbols
+function removeDoubleQuotes(input) {
+  return input.replaceAll('"', '')
+}
+
+module.exports = {
+  parseSymbols,
+  removeDoubleQuotes,
+}

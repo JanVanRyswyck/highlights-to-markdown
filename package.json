@@ -17,7 +17,7 @@
     "prettier": "^2.8.4"
   },
   "scripts": {
-    "oreilly": "node app oreilly ./oreilly-annotations.csv \"$MARKDOWN_PATH/highlights/oreilly\"",
+    "oreilly": "node app oreilly input/oreilly-annotations.csv ./output",
     "oreillyjson": "node app oreillyjson ./input \"$MARKDOWN_PATH/highlights/oreilly\"",
     "kindle": "node app kindle \"./My Clippings.txt\" \"$MARKDOWN_PATH/highlights/kindle\"",
     "test": "jest",
